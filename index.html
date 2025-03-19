@@ -1,0 +1,2328 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="Forest Environment and Climate Change Department (Forest Headquarters)">
+    <meta name="keywords" content="Forest Environment and Climate Change Department (Forest Headquarters)" />
+    <meta name="author" content="Orsac">
+    <title>Forest Environment and Climate Change Department (Forest Headquarters)</title>
+        <!-- master stylesheet -->
+<link rel="stylesheet" href="https://odishaforest.in/assets/css/style.css">
+
+
+<!-- Responsive stylesheet -->
+<link rel="stylesheet" href="https://odishaforest.in/assets/css/responsive.css">
+<link  href="https://odishaforest.in/assets/css/ticker.css" rel="stylesheet" media="screen">
+<link  href="https://odishaforest.in/assets/css/ticker.css" rel="stylesheet" media="screen">
+<!-- <link href="https://odishaforest.in/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+<link rel="stylesheet" href="https://odishaforest.in/assets/menu/burgermenu.css">
+<link rel="stylesheet" href="https://odishaforest.in/assets/menu/themes/default.css">
+<link rel="alternate stylesheet" type="text/css" href="https://odishaforest.in/assets/css/style-purpel.css" title="styles2" media="screen" disabled="">
+<link rel="alternate stylesheet" type="text/css" href="https://odishaforest.in/assets/css/style-yellow.css" title="styles1" media="screen" disabled="" >
+<link rel="alternate stylesheet" type="text/css" href="https://odishaforest.in/assets/css/style-blue.css" title="styles3" media="screen" disabled="">
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="https://odishaforest.in/assets/images/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://odishaforest.in/assets/images/favicon/favicon-16x16.png" sizes="16x16">
+
+<!-- <link rel="stylesheet" href="https://odishaforest.in/assets/language-switcher/polyglot-language-switcher.css"> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css'>
+<style>
+.my-carousel{
+width:100%;
+margin: 0 auto;
+position: relative;
+}
+.my-carousel-item img{
+width: 100%;
+}
+.my-carousel .owl-nav{
+position: absolute;
+top: 45%;
+width:95%;
+margin: 0 auto;
+left:0;
+right:0;
+display: flex;
+justify-content: space-between;
+}
+.my-carousel .nav-main-slider-btn{
+color: #fff !important;
+display: block;
+width: 20px;
+height: 20px;
+font-size: 30px !important;
+border: none;
+outline: none;
+
+}
+.my-carousel .owl-dots{
+position: absolute;
+bottom: 0;
+width: 100%;
+display: flex;
+justify-content: center;
+}
+.my-carousel .owl-dot{
+display: block;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background-color: #fff !important;
+margin: 10px;
+outline: none;
+}
+</style>
+
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css" type="text/css">
+<!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.container-fluid {
+    height: 100%;
+}
+.map {
+    height: calc(100% - 100px);
+    width: 100%;
+}
+.row {
+    height: 100%;
+}
+.header {
+    height: 50px;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-bottom: 1px solid #ddd;
+}
+.map-header {
+    text-align: center;
+    background-color: #e9ecef;
+    padding: 5px;
+    font-weight: bold;
+}
+.map-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.map {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.legend {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: fit-content;
+    position: absolute;
+    bottom: 200px;
+    right: 20px;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.legend-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.fire-icon {
+    background-image: url('fire.png'); /* Replace with your fire icon path */
+}
+.responded-icon {
+    background-image: url('fire_responded.png'); /* Replace with your responded icon path */
+}
+.north-arrow {
+    position: absolute;
+top: 10px;
+right: 0%;
+/* transform: translateX(-50%); */
+width: 146px;
+height: 146px;
+background-image: url(http://localhost/odishaforest/assets/images/north-arrow.png);
+background-size: cover;
+z-index: 9999;
+}
+</style>
+
+
+
+</head>
+<body>
+<div class="boxed_wrapper">
+
+        <!-- <div class="preloader"></div> -->
+
+
+    <!-- Header -->
+<section class="top-bar-style2">
+    <div class="container clearfix">
+        <div class="topbar-style3-content">
+            <div class="topbar-style3-left">
+                <ul class="clearfix">
+                    <li><a href="#one"> Skip to main content <i class="fa fa-angle-double-right"></i></a></li>
+                                                <li><a href="https://odishaforest.in/screen-reader-access"><i class="fa fa-volume-up"></i> Screen reader Access</a></li>
+                    <li id="fon-size">
+                        <a href="#" class="small" id="btn-decrease" onClick="changemysize('-',this);">&nbsp;&nbsp;A-</a>
+                        <a href="#" class="medium" id="btn-orig" onClick="changemysize('0',this);">&nbsp;&nbsp;A</a>
+                        <a href="#" class="large" id="btn-increase" onClick="changemysize('+',this);">&nbsp;&nbsp;A+</a>
+                    </li>
+                    <li id="theme-style">
+                        <a href="style=style.css" rel="styles" class="styleswitch theme4">T</a>
+                        <a href="style=style-yellow.css" rel="styles1" class="styleswitch theme1">T</a>
+                        <a href="style=style-purpel.css" rel="styles2" class="styleswitch theme2">T</a>
+                        <a href="style=style-blue.css" rel="styles3" class="styleswitch theme3">T</a>
+        </li>
+        <li><p><a href="https://odishaforest.in/forest-fire" target="_self" title="Forest Fire"><img src="https://odishaforest.in/assets/images/fireicon.png" style="width: 20px;height:27px" > Forest Fire</a></p></li>
+                    <!--<li id="theme-style">
+                <div class="outer-search-box">
+                                    <div class="seach-toggle"><i class="fa fa-search"></i></div>
+                                    <ul class="search-box">
+                                        <li>
+                                            <form method="post" action="#">
+                                                <div class="form-group">
+                                                    <input type="search" name="search" placeholder="Search Here" required="">
+                                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                                </div>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                                </li>-->
+                </ul>
+
+            </div>
+            <div class="topbar-style3-right">
+                <ul class="clearfix">
+                    <li><a href="https://odishaforest.in/"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="./result.htm" target="_blank"><i class="fa fa-envelope-o"></i> Result </a></li>
+
+                    <li><a href="https://odishaforest.in/site-map"><i class="fa fa-sitemap"></i> Sitemap</a></li>
+                                <li><a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/@apccfitgis3910"><i class="fa fa-youtube"></i></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/pccfodisha/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://x.com/pccfodisha" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512"><path fill="#fff" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a></li>
+                    <!-- <li><a href="https://www.facebook.com/pccfodisha/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/pccfodisha" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC_ByHl5UbJhbcFZ6pbjLNqg/feed" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li> -->
+                    <!-- <li><a href="https://twitter.com/pccfodisha" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>-->
+                </ul>
+
+                <div class="burgermenu-sticky-head">
+                    <a id="burgermenu-toggle" href="#menu-example"><i class="fa fa-bars"></i></a>
+                </div>
+
+
+
+
+                <div class="language-switcher" style=" right: -64px;">
+                    <div id="polyglotLanguageSwitcher">
+                        <!-- <form action="#"> -->
+                            <select id="polyglot-language-options" onchange="changeLanguage(this.value)">
+                                                                  <option selected  id="en" value="https://odishaforest.in/language/odia">English</option>
+                                <option  id="odia" value="https://odishaforest.in/language/odia"> ଓଡ଼ିଆ</option>
+
+
+
+
+                        </select>
+                        <!-- </form> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+function changeLanguage(url) {
+window.location = url;
+}
+</script>
+
+
+
+<nav id="menu-example" class="burgermenu-left">
+                        <ul class="burgermenu-panel">
+                                           <li class="active"><a href="https://odishaforest.in/">Home</a></li>
+                            <li class="dropdown ">
+                <a href="javascript:void(0);" >
+                    About Us						</a>
+                <ul class='dropdown-children'>
+        <li>
+            <a href="https://odishaforest.in/about-us/History-Evolution" >
+                History & Evolution					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/about-us/structure-organogram" >
+                Structure & Organogram					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/about-us/phone-directory" >
+                Phone Directory					</a>
+        </li>
+
+    </ul>					</li>
+                            <li class="dropdown ">
+                <a href="javascript:void(0);" >
+                    Forests in Odisha						</a>
+                <ul class='dropdown-children'>
+        <li>
+            <a href="https://odishaforest.in/forests-in-odisha/forest-types" >
+                Forest Types					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/forests-in-odisha/endemic-flora-and-fauna" >
+                Endemic Flora and Fauna					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/forests-in-odisha/protected-areas" >
+                Protected Areas					</a>
+        </li>
+
+    </ul>					</li>
+                            <li class="dropdown ">
+                <a href="https://odishaforest.in/forest-management" >
+                    Forest Management						</a>
+                <ul class='dropdown-children'>
+        <li>
+            <a href="https://odishaforest.in/forest-management/about-forest-management" >
+                About Forest Management					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/forest-management/forest-protection" >
+                Forest Protection					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/forest-management/joint-forest-management" >
+                Joint Forest Management					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/forest-management/working-plan" >
+                Working Plan					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/forest-management/forest-offences" >
+                Forest Offences					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/forest-management/saw-mills" >
+                Saw Mills					</a>
+        </li>
+
+    </ul>					</li>
+                            <li class="">
+                <a href="https://odishaforest.in/forest-fire" >
+                    Forest Fire						</a>
+            </li>
+                            <li class="dropdown ">
+                <a href="javascript:void(0);" >
+                    HRD						</a>
+                <ul class='dropdown-children'>
+        <li>
+            <a href="https://odishaforest.in/hrd/ifs-disposition-list" >
+                IFS Disposition List					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/hrd/ofs-disposition-list-sb" >
+                OFS Disposition List SB					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/hrd/ofs-disposition-list-jb" >
+                OFS Disposition List JB					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/hrd/disposition-list-of-forest-rangers" >
+                Disposition List of Forest Rangers					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/hrd/ofs-II-disposition-new" >
+                OFS - II Disposition (NEW)					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/hrd/gradation-list" >
+                Gradation List					</a>
+        </li>
+
+    </ul>					</li>
+                            <li class="dropdown ">
+                <a href="javascript:void(0);" >
+                    Afforestation						</a>
+                <ul class='dropdown-children'>
+        <li>
+            <a href="https://odishaforest.in/afforestation/afforestation-activities" >
+                Afforestation Activities					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/afforestation/sfda" >
+                SFDA					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/afforestation/mgnregs" >
+                MGNREGS					</a>
+        </li>
+
+
+        <!-- <li class="has-children"> -->
+        <li class="dropdown">
+            <a href="javascript:void(0)" >
+                Vana Mahotsav					</a>
+
+            <ul class='dropdown-children'>
+        <li>
+            <a href="https://odishaforest.in/afforestation/vana-mahotsav/information-for-public" >
+                Information for Public					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/afforestation/vana-mahotsav/guidelines-for-vana-mahotsav" >
+                Guidelines for Vana Mahotsav					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/afforestation/vana-mahotsav/additional-guidelines" >
+                Additional Guidelines					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/afforestation/vana-mahotsav/plantation-status" >
+                Plantation Status					</a>
+        </li>
+
+    </ul>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/afforestation/seedling-distribution" >
+                Seedling Distribution 					</a>
+        </li>
+
+    </ul>					</li>
+                            <li class="dropdown ">
+                <a href="https://odishaforest.in/front-forest-cover" >
+                    Forest Cover Change						</a>
+                <ul class='dropdown-children'>
+        <li>
+            <a href="https://odishaforest.in/front-forest-cover/det/1" >
+                Forest Cover Change 2015 - 2017					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/forest/front-forest-cover/det/2">
+                Forest Cover Change 2017 - 2019					</a>
+        </li>
+
+
+        <li>
+            <a href="https://odishaforest.in/front-forest-cover/det/3" >
+                Forest Cover Change 2019 - 2021					</a>
+        </li>
+
+    </ul>					</li>
+                            <li class="">
+                <a href="https://odishaforest.in/rules-circulars" >
+                    Rules/Circulars						</a>
+            </li>
+                            <li class="">
+                <a href="https://odishaforest.in/rti" >
+                    RTI						</a>
+            </li>
+                            <li class="">
+                <a href="https://odishaforest.in/tenders" >
+                    Tenders						</a>
+            </li>
+                            <li class="">
+                <a href="https://odishaforest.in/contact-us" >
+                    Contact us						</a>
+            </li>
+                                        </ul>
+
+                      </nav>
+                    <!--Start Header style3 Area-->
+                    <section class="header-style3-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="header-style3-content">
+                    <div class="logo-box-style3 float-left">
+                    <a  href="https://odishaforest.in/">
+                        <img src="https://odishaforest.in/admin/data/logo/logo_1820962327.png" alt="Odisha State Forest">
+                        </a>
+                        <!-- <a href="index.html">
+                            <img src="images/logo-osfd.png" alt="osfd Logo">
+                        </a> -->
+                    </div>
+                    <div class="logo-box-style2 float-right">
+                        <a href="https://odishaforest.in/" target="_blank">
+                        <img src="https://odishaforest.in/admin/data/logo/logo_1886841604.jpg" alt="CM of Odisha">
+                        </a>
+
+                    </div>
+                    <div class="logo-box-style2 float-right">
+                        <a href="https://odishaforest.in/" target="_blank">
+                        <img src="https://odishaforest.in/admin/data/logo/logo_187385905.jpg" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Header style3 Area-->
+    <!--Main Slider-->
+<section class="main-slider style3">
+<div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
+<div class="rev_slider fullwidthabanner" id="rev_slider_two" data-version="5.4.1">
+    <!--<div class="slide-content left-slide">
+                            <div class="big-title">
+                               Welcome to ODISHA STATE FOREST DEPARTMENT <br>
+                               Official website of PCCF & HoFF Odisha<br>
+                               </div>
+                        </div>-->
+    <ul>
+                            <li data-fstransition="fade" data-index="rs-175">
+                <img class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://odishaforest.in/admin/data/appimg/banner_254176273.jpg" alt="Odisha State Kendu Leaf Organisation">
+            </li>
+                            <li data-fstransition="fade" data-index="rs-1258">
+                <img class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://odishaforest.in/admin/data/appimg/banner_117464610.jpg" alt="Odisha State Kendu Leaf Organisation">
+            </li>
+                            <li data-fstransition="fade" data-index="rs-1342">
+                <img class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://odishaforest.in/admin/data/appimg/banner_1274651798.jpg" alt="Odisha State Kendu Leaf Organisation">
+            </li>
+                            <li data-fstransition="fade" data-index="rs-1206">
+                <img class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://odishaforest.in/admin/data/appimg/banner_610061369.jpg" alt="Odisha State Kendu Leaf Organisation">
+            </li>
+                            <li data-fstransition="fade" data-index="rs-1257">
+                <img class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://odishaforest.in/admin/data/appimg/banner_2108930726.jpg" alt="Odisha State Kendu Leaf Organisation">
+            </li>
+                            <li data-fstransition="fade" data-index="rs-1209">
+                <img class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://odishaforest.in/admin/data/appimg/banner_565435191.jpg" alt="Odisha State Kendu Leaf Organisation">
+            </li>
+                            <li data-fstransition="fade" data-index="rs-1469">
+                <img class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://odishaforest.in/admin/data/appimg/banner_325534024.jpg" alt="Odisha State Kendu Leaf Organisation">
+            </li>
+                            <li data-fstransition="fade" data-index="rs-1207">
+                <img class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://odishaforest.in/admin/data/appimg/banner_1962316846.jpg" alt="Odisha State Kendu Leaf Organisation">
+            </li>
+                            <li data-fstransition="fade" data-index="rs-1470">
+                <img class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://odishaforest.in/admin/data/appimg/banner_1213249141.jpg" alt="Odisha State Kendu Leaf Organisation">
+            </li>
+                            <li data-fstransition="fade" data-index="rs-590">
+                <img class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://odishaforest.in/admin/data/appimg/banner_1136591489.jpg" alt="Odisha State Kendu Leaf Organisation">
+            </li>
+                            <li data-fstransition="fade" data-index="rs-1103">
+                <img class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://odishaforest.in/admin/data/appimg/banner_1917255722.jpg" alt="Odisha State Kendu Leaf Organisation">
+            </li>
+                            <li data-fstransition="fade" data-index="rs-1468">
+                <img class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://odishaforest.in/admin/data/appimg/banner_1185950649.jpg" alt="Odisha State Kendu Leaf Organisation">
+            </li>
+                            <li data-fstransition="fade" data-index="rs-593">
+                <img class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://odishaforest.in/admin/data/appimg/banner_2068018908.jpg" alt="Odisha State Kendu Leaf Organisation">
+            </li>
+
+    </ul>
+</div>
+</div>
+<script>
+$(document).ready(function(e) {
+    $(".rev_slider").revolution({
+        sliderType: "standard",
+        sliderLayout: "auto",
+        dottedOverlay: "none",
+        delay: 5000,
+        navigation: {
+            keyboardNavigation: "off",
+            keyboard_direction: "horizontal",
+            mouseScrollNavigation: "off",
+            onHoverStop: "off",
+            touch: {
+                touchenabled: "on",
+                swipe_threshold: 75,
+                swipe_min_touches: 1,
+                swipe_direction: "horizontal",
+                drag_block_vertical: false
+            },
+            arrows: {
+                style: "gyges",
+                enable: true,
+                hide_onmobile: false,
+                hide_onleave: true,
+                hide_delay: 200,
+                hide_delay_mobile: 1200,
+                tmp: '',
+                left: {
+                    h_align: "left",
+                    v_align: "center",
+                    h_offset: 0,
+                    v_offset: 0
+                },
+                right: {
+                    h_align: "right",
+                    v_align: "center",
+                    h_offset: 0,
+                    v_offset: 0
+                }
+            },
+            bullets: {
+                enable: true,
+                hide_onmobile: true,
+                hide_under: 960,
+                style: "zeus",
+                hide_onleave: false,
+                direction: "horizontal",
+                h_align: "right",
+                v_align: "bottom",
+                h_offset: 80,
+                v_offset: 50,
+                space: 5,
+                tmp: '<span class="tp-bullet-image"></span><span class="tp-bullet-imageoverlay"></span><span class="tp-bullet-title">{{title}}</span>'
+            }
+        },
+        responsiveLevels: [500, 300, 200, 100],
+        visibilityLevels: [1240, 1024, 778, 480],
+        gridwidth: [1170, 1024, 778, 480],
+        gridheight: [500, 768, 960, 720],
+        lazyType: "none",
+        parallax: {
+            origo: "slidercenter",
+            speed: 1000,
+            levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 100, 55],
+            type: "scroll"
+        },
+        shadow: 0,
+        spinner: "off",
+        stopLoop: "on",
+        stopAfterLoops: 0,
+        stopAtSlide: -1,
+        shuffle: "off",
+        autoHeight: "off",
+        fullScreenAutoWidth: "off",
+        fullScreenAlignForce: "off",
+        fullScreenOffsetContainer: "",
+        fullScreenOffset: "0",
+        hideThumbsOnMobile: "off",
+        hideSliderAtLimit: 0,
+        hideCaptionAtLimit: 0,
+        hideAllCaptionAtLilmit: 0,
+        debugMode: false,
+        fallbacks: {
+            simplifyAll: "off",
+            nextSlideOnWindowFocus: "off",
+            disableFocusListener: false,
+        }
+    });
+});
+</script>
+</section>
+
+
+
+
+
+<section style="background-color: #3c5464;">
+<div class="container">
+<div class="row">
+    <div class="col-xl-12">
+        <div class="ticker-container">
+            <!--<div class="ticker-caption">
+                <p style="font-size:12px;">UPCOMING EVENTS:</p>
+            </div>
+            <ul>
+                <div>
+                    <li><span><a href="https://www.youtube.com/watch?v=dQXbJJz4NWs" target="_blank"><i class="fa fa-youtube-square fa-lg" aria-hidden="true"></i> Celebration of State Level 73rd Vanamohostava 2022 </a></span></li>
+                </div>
+                <div>
+                    <li><span><a href="https://www.facebook.com/events/798835561498587?sfnsn=wiwspwa" target="_blank"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i> Celebration of State Level 73rd Vanamohostava 2022 </a></span></li>
+                </div>
+                <div>
+                    <li><span><a href="#">Each one please Plant a sapling & take care of it • </a></span></li>
+                </div>
+                <div>
+                    <li><span><a href="https://odishaforest.in/assets/index.html">Best wishes for Celebration of Vana Mahotsav Week - 2022 Plant a Tree & take care of it • </a></span></li>
+                </div>
+            </ul>
+        </div>-->
+    </div>
+</div>
+</div>
+</section>
+<!--End Main Slider-->
+<div id="one"></div>
+<section class="why-choose-area" style="background-image:url(images/bg.jpg);">
+<div class="container">
+<div class="row">
+    <div class="col-xl-12">
+
+
+    <div class="why-choose-title float-left">
+        <div class="single-box whitebg why-choose-content3">
+            <div class="icon-holder">
+                <div class="img-box">
+                    <img style="    max-height: 291px;" alt="Shri Mohan Charan Majhi" src="https://odishaforest.in/admin/data/appimg/static_1891697428.png">
+
+                </div>
+            </div>
+            <div class="text-holder3">
+                <h3>Shri Mohan Charan Majhi</h3>
+                <p><p>Hon&#39;ble Chief Minister</p>
+</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <div class="why-choose-title float-left">
+            <!--Start Single Box-->
+
+<!--  -->
+<div class="single-box whitebg why-choose-content2">
+    <div class="icon-holder">
+        <div class="img-box">
+            <img alt="Shri Ganesh Ram Singhkhuntia" src="https://odishaforest.in/admin/data/appimg/key_funct_86681286.jpg">
+        </div>
+    </div>
+    <div class="text-holder">
+        <h3>Shri Ganesh Ram Singhkhuntia</h3>
+        <p>
+            Hon'ble Minister Forest, Environment & Climate Change Dept., Govt. of Odisha				</p>
+    </div>
+</div>
+
+
+
+<!--  -->
+<div class="single-box whitebg why-choose-content2">
+    <div class="icon-holder">
+        <div class="img-box">
+            <img alt="Shri Satyabrata Sahu, IAS" src="https://odishaforest.in/admin/data/appimg/key_funct_1270063215.jpg">
+        </div>
+    </div>
+    <div class="text-holder">
+        <h3>Shri Satyabrata Sahu, IAS</h3>
+        <p>
+            Additional Chief Secretary, </br>
+Forest & Environment Dept., Govt. of Odisha				</p>
+    </div>
+</div>
+
+
+            </div>
+
+        <div class="why-choose-title float-right">
+            <!--Start Single Box-->
+            <div class="single-box whitebg why-choose-content1">
+                                        <div class="icon-holder">
+                    <div class="img-box">
+                        <!-- <img src="https://odishaforest.in/assets/images/key/debidutta-biswal.jpg" alt="Debidutta Biswal"> -->
+                        <img src="https://odishaforest.in/admin/data/appimg/static_595896878.jpg" alt="Odishaforest">
+                    </div>
+                </div>
+
+            </div>
+            <div style="    padding: 10px;">
+
+
+            <h3><span style="color:#ffff00;">Shri Suresh Pant, IFS (RR-1990)</span></h3>
+
+<p><span style="color:#ffffff;">Principal Chief Conservator of Forests and<br />
+Head of Forest Force, Odisha</span></p>
+
+<p><span style="color:#ffff00;">ABOUT US</span></p>
+
+<p align="justify"><span style="color:#ffffff;">The Forest Department in Odisha came into existence during pre-independence period since 1883-84, when Odisha was a part of Bengal. A solitary division was there namely, Odisha Division amongst 10 Divisions comprising the whole of ...</span></p>
+<quillbot-extension-portal></quillbot-extension-portal><quillbot-extension-portal></quillbot-extension-portal>                    </div>
+
+            <!--End Single Box-->
+
+            <div style="    margin-top: -9px;" class="button">
+                <a class="btn-one" href="https://odishaforest.in/about-us/History-Evolution">Read More</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+</section>
+
+<!--End Featured Area-->
+<!--Start Admission Area-->
+<section class="highlights-area">
+<div class="container">
+<div class="row">
+    <!--Start single highlight box-->
+    <div class="col-xs-6 col-sm-6 col-md-6 mb-sm-30">
+        <div class="pricing-table bg-silver-deep text-center maxwidth400 pt-0">
+            <h4 class="package-type font-weight-400 text-green mt-0 mb-0 pt-10 pb-10 font-20"><i class="fa fa-newspaper-o"></i> News & Events</h4>
+            <ul class="list price-list theme-colored text-left flip mt-0 mb-20 ar-ul-bg">
+                <li>
+                    <marquee onmouseover="this.stop();" onmouseout="this.start();" direction="up" scrollamount="2" height="235">
+                        <ul class="impLinks" id="impLinks">
+                            <li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_526872617.pdf"><i class="fa fa-file-pdf-o text-danger"></i>Notification No.FE-WL-WLF-0015-2023-13915/FE&CC</a>
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_1161503392.pdf"><i class="fa fa-file-pdf-o text-danger"></i>Method of Recruitment and Conditions of Service of Forest Guards Rules -2021 </a>
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_971632780.pdf"><i class="fa fa-file-pdf-o text-danger"></i>Public Information Officer(P.I.O) for the O/o PCCF & HoFF,Odisha</a>
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_384040287.pdf"><i class="fa fa-file-pdf-o text-danger"></i>Tentative Gradation List of Deputy Conservator of Forests in OFS, Gr-A (SB) officers as on 01.01.2024 - regarding.</a>
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_1547998691.pdf"><i class="fa fa-file-pdf-o text-danger"></i>Standard Operating Procedure (SOP) for dealing with Digital Evidence.pdf</a>
+
+</li><li>
+
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_694904874.pdf"><i class="fa fa-file-pdf-o text-danger"></i>Method of Recruitment and Conditions of Service of Foresters Rules-2021</a>
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_1505806138.pdf"><i class="fa fa-file-pdf-o text-danger"></i>Guidelines for the Rescue and Release of Snakes from the Human Dominated Areas by Snake Handlers.</a>
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_942023927.pdf"><i class="fa fa-file-pdf-o text-danger"></i>Plastic Free Picnic Spot.</a>
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_1599016495.pdf"><i class="fa fa-file-pdf-o text-danger"></i>Standard Operating Procedure for Elephant Endotheliotropic Herpes Virus- Hemorrhagic Diseases.</a>
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_335983668.pdf"><i class="fa fa-file-pdf-o text-danger"></i>Recruitment and Conditions of Service of the persons appointed to the Odisha Forest Service, Group-A, (Junior Branch), Rules-2014</a>
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_609700916.pdf"><i class="fa fa-file-pdf-o text-danger"></i>SOP of Audio-Video Recording for Scene of Crime.</a>
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_546081514.pdf"><i class="fa fa-file-pdf-o text-danger"></i>Recruitment and Conditions of Service of the persons appointed to the Odisha Forest Service,Group 'B' Rules-2013</a>
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_1630306188.PDF"><i class="fa fa-file-pdf-o text-danger"></i>Recruitment and Conditions of Service of the persons appointed to the Odisha Forest Service,Group 'B' Rules-2013</a>
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_1217834039.pdf"><i class="fa fa-file-pdf-o text-danger"></i>Rules to regulate the method of Recruitment to the posts of Junior Assistants, Senior Assistants and Section Officers in the District Offices and offices Subordinate-2019</a>
+
+</li><li>
+<a  id="orangetext" target="_blank" href="https://odishaforest.in/admin/data/documents/latestnews_556210905.pdf"><i class="fa fa-file-pdf-o text-danger"></i>1st Appellate Authority for the O/o PCCF & HoFF,Odisha </a>
+
+</li>
+                        </ul>
+                    </marquee>
+                </li>
+            </ul>
+            <div class="read-more" align="right">
+                <a class="btn-one" href="https://odishaforest.in/latest-news">View More</a>
+            </div>
+        </div>
+    </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 mb-sm-30">
+        <div class="single-project-style2">
+            <div class="img-holder">
+                <img alt="publications" src="https://odishaforest.in/admin/data/appimg/pagebanner_1560387520.jpg">
+
+                <div class="read-more">
+
+                    <a href="https://odishaforest.in/publications"><span class="icon-next"></span></a>
+                </div>
+                <div class="title-box">
+                    <h3> publications</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--End single highlight box-->
+</div>
+
+</div>
+</section>
+<!--End Admission Area-->
+
+<!--Start services style1 area-->
+<section class="services-style1-area">
+<div class="container">
+<div class="row">
+    <!--Start single service style1-->
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="single-service-style1 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1200ms">
+            <a href="https://odishaforest.in/photo-gallery" class="text-white">
+                <div class="img-holder">
+
+                    <img src="images/gallery/photogallery.jpg" alt="Awesome Image">
+                    <div class="overlay-style-two"></div>
+                    <div class="overlay-content-box">
+                        <div class="box">
+                            <div class="inner text-white">
+                                <div class="icon">
+                                    <i class="fa fa-camera" aria-hidden="true" style="font-size:35px;"></i>
+                                </div>
+                                <div class="title">
+                                    <h3>Photo Gallery</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!--End single service style1-->
+    <!--Start single service style1-->
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="single-service-style1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1200ms">
+            <a href="https://odishaforest.in/video-gallery" class="text-white">
+                <div class="img-holder">
+                    <img src="https://odishaforest.in/assets/images/gallery/video.jpg" alt="Awesome Image">
+                    <div class="overlay-style-two"></div>
+                    <div class="overlay-content-box">
+                        <div class="box">
+                            <div class="inner text-white">
+                                <div class="icon">
+                                    <i class="fa fa-video-camera" aria-hidden="true" style="font-size:35px;"></i>
+                                </div>
+                                <div class="title">
+                                    <h3>Video Gallery</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <!--End single service style1-->
+    <!--Start single service style1-->
+
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="single-service-style1 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1200ms">
+        <a href="https://odishaforest.in/afforestation/vana-mahotsav" class="text-white">
+                <div class="img-holder">
+                <img src="https://odishaforest.in/admin/data/appimg/static_919029555.jpg" alt="Vana Mahotsav">
+                    <div class="overlay-style-two"></div>
+                    <div class="overlay-content-box">
+                        <div class="box">
+                            <div class="inner text-white">
+                                <div class="icon">
+                                    <i class="fa fa-tree" aria-hidden="true" style="font-size:35px;"></i>
+                                </div>
+                                <div class="title">
+                                <h3>Vana Mahotsav</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!--End single service style1-->
+    <!--Start single service style1-->
+
+
+
+
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="single-service-style1 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1200ms">
+            <a href="https://odishaforest.in/eco-tourism" class="text-white">
+                <div class="img-holder">
+                    <img src="https://odishaforest.in/admin/data/appimg/static_47163599.jpg" alt="Eco-Tourism">
+                    <div class="overlay-style-two"></div>
+                    <div class="overlay-content-box">
+                        <div class="box">
+                            <div class="inner text-white">
+                                <div class="icon">
+                                    <i class="fa fa-plane" aria-hidden="true" style="font-size:35px;"></i>
+                                </div>
+                                <div class="title">
+                                    <h3>Eco-Tourism</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!--End single service style1-->
+</div>
+</div>
+</section>
+<!--End services style1 area-->
+
+
+
+<!--Start Working Process Area-->
+<section class="working-process-area">
+<div class="container">
+
+<div class="row">
+
+                 <!--Start Single Working Process-->
+    <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+        <div class="sec-titleI text-center">
+            <div class="title">Forests in Odisha</php></div>
+        </div>
+        <div class="single-working-process text-center">
+
+            <div class="inner">
+                <div class="single-footer-widget">
+                    <div class="owl-carousel my-carousel">
+
+                                                    <div class="single-item">
+                            <div class="img-holder">
+                            <div class="my-carousel-item">
+
+                            <img src="https://odishaforest.in/admin/data/appimg/static_750388203.jpg" alt="Forest Types">
+
+                        </div>
+                            </div><br>
+                            <div class="title-holder" style="height: 174px;">
+                                <h3>Forest Types</h3>
+                                <a class="btn-two" href="https://odishaforest.in/forests-in-odisha/forest-types">Read More<span class="flaticon-next"></span></a>
+                            </div>
+                        </div>
+
+
+                                                    <div class="single-item">
+                            <div class="img-holder">
+                            <div class="my-carousel-item">
+
+                            <img src="https://odishaforest.in/admin/data/appimg/static_1627897815.jpg" alt="Endemic Flora and Fauna">
+
+                        </div>
+                            </div><br>
+                            <div class="title-holder" style="height: 174px;">
+                                <h3>Endemic Flora and Fauna</h3>
+                                <a class="btn-two" href="https://odishaforest.in/forests-in-odisha/endemic-flora-and-fauna">Read More<span class="flaticon-next"></span></a>
+                            </div>
+                        </div>
+
+
+                                                    <div class="single-item">
+                            <div class="img-holder">
+                            <div class="my-carousel-item">
+
+                            <img src="https://odishaforest.in/admin/data/appimg/static_1347019345.jpg" alt="Protected Areas">
+
+                        </div>
+                            </div><br>
+                            <div class="title-holder" style="height: 174px;">
+                                <h3>Protected Areas</h3>
+                                <a class="btn-two" href="https://odishaforest.in/forests-in-odisha/protected-areas">Read More<span class="flaticon-next"></span></a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <!--Start Single Working Process-->
+<div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+    <div class="sec-titleI text-center">
+        <div class="title">Forest Management</php></div>
+    </div>
+    <div class="single-working-process text-center">
+
+        <div class="inner">
+            <div class="single-footer-widget">
+                <div class="owl-carousel my-carousel">
+
+                                            <div class="single-item">
+                        <div class="img-holder">
+                        <div class="my-carousel-item">
+
+                        <img src="https://odishaforest.in/admin/data/appimg/static_202802229.jpeg" alt="About Forest Management">
+
+                    </div>
+                        </div><br>
+                        <div class="title-holder" style="height: 174px;">
+                            <h3>About Forest Management</h3>
+                            <a class="btn-two" href="https://odishaforest.in/forest-management/about-forest-management">Read More<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+
+
+                                            <div class="single-item">
+                        <div class="img-holder">
+                        <div class="my-carousel-item">
+
+                        <img src="https://odishaforest.in/admin/data/appimg/static_1356062264.jpeg" alt="Forest Protection">
+
+                    </div>
+                        </div><br>
+                        <div class="title-holder" style="height: 174px;">
+                            <h3>Forest Protection</h3>
+                            <a class="btn-two" href="https://odishaforest.in/forest-management/forest-protection">Read More<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+
+
+                                            <div class="single-item">
+                        <div class="img-holder">
+                        <div class="my-carousel-item">
+
+                        <img src="https://odishaforest.in/admin/data/appimg/static_416280669.jpeg" alt="Joint Forest Management">
+
+                    </div>
+                        </div><br>
+                        <div class="title-holder" style="height: 174px;">
+                            <h3>Joint Forest Management</h3>
+                            <a class="btn-two" href="https://odishaforest.in/forest-management/joint-forest-management">Read More<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+
+
+                                            <div class="single-item">
+                        <div class="img-holder">
+                        <div class="my-carousel-item">
+
+                        <img src="https://odishaforest.in/admin/data/appimg/static_1154121781.jpeg" alt="Working Plan">
+
+                    </div>
+                        </div><br>
+                        <div class="title-holder" style="height: 174px;">
+                            <h3>Working Plan</h3>
+                            <a class="btn-two" href="https://odishaforest.in/forest-management/working-plan">Read More<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+
+
+                                            <div class="single-item">
+                        <div class="img-holder">
+                        <div class="my-carousel-item">
+
+                        <img src="https://odishaforest.in/admin/data/appimg/static_1504274574.jpeg" alt="Forest Offences">
+
+                    </div>
+                        </div><br>
+                        <div class="title-holder" style="height: 174px;">
+                            <h3>Forest Offences</h3>
+                            <a class="btn-two" href="https://odishaforest.in/forest-management/forest-offences">Read More<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+
+
+                                            <div class="single-item">
+                        <div class="img-holder">
+                        <div class="my-carousel-item">
+
+                        <img src="https://odishaforest.in/admin/data/appimg/static_211785762.jpeg" alt="Saw Mills">
+
+                    </div>
+                        </div><br>
+                        <div class="title-holder" style="height: 174px;">
+                            <h3>Saw Mills</h3>
+                            <a class="btn-two" href="https://odishaforest.in/forest-management/saw-mills">Read More<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!--Start Single Working Process-->
+<div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+    <div class="sec-titleI text-center">
+        <div class="title">Afforestation</php></div>
+    </div>
+    <div class="single-working-process text-center">
+
+        <div class="inner">
+            <div class="single-footer-widget">
+                <div class="owl-carousel my-carousel">
+
+                                            <div class="single-item">
+                        <div class="img-holder">
+                        <div class="my-carousel-item">
+
+                        <img src="https://odishaforest.in/admin/data/appimg/static_1825154328.jpeg" alt="Afforestation Activities">
+
+                    </div>
+                        </div><br>
+                        <div class="title-holder" style="height: 174px;">
+                            <h3>Afforestation Activities</h3>
+                            <a class="btn-two" href="https://odishaforest.in/afforestation/sfda">Read More<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+
+
+                                            <div class="single-item">
+                        <div class="img-holder">
+                        <div class="my-carousel-item">
+
+                        <img src="https://odishaforest.in/admin/data/appimg/static_1300688621.jpeg" alt="SFDA">
+
+                    </div>
+                        </div><br>
+                        <div class="title-holder" style="height: 174px;">
+                            <h3>SFDA</h3>
+                            <a class="btn-two" href="https://odishaforest.in/afforestation/sfda">Read More<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+
+
+                                            <div class="single-item">
+                        <div class="img-holder">
+                        <div class="my-carousel-item">
+
+                        <img src="https://odishaforest.in/admin/data/appimg/static_668864528.jpeg" alt="MGNREGS">
+
+                    </div>
+                        </div><br>
+                        <div class="title-holder" style="height: 174px;">
+                            <h3>MGNREGS</h3>
+                            <a class="btn-two" href="https://odishaforest.in/afforestation/mgnregs">Read More<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+
+
+                                            <div class="single-item">
+                        <div class="img-holder">
+                        <div class="my-carousel-item">
+
+                        <img src="https://odishaforest.in/admin/data/appimg/static_1720267437.jpeg" alt="Seedling Distribution">
+
+                    </div>
+                        </div><br>
+                        <div class="title-holder" style="height: 174px;">
+                            <h3>Seedling Distribution</h3>
+                            <a class="btn-two" href="https://odishaforest.in/afforestation/seedling-distribution">Read More<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+
+
+                                            <div class="single-item">
+                        <div class="img-holder">
+                        <div class="my-carousel-item">
+
+                        <img src="https://odishaforest.in/admin/data/appimg/static_2094162935.jpeg" alt="Vana Mahotsav">
+
+                    </div>
+                        </div><br>
+                        <div class="title-holder" style="height: 174px;">
+                            <h3>Vana Mahotsav</h3>
+                            <a class="btn-two" href="https://odishaforest.in/afforestation/vana-mahotsav">Read More<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+        <div class="sec-titleI text-center">
+            <div class="title">FOREST BUDGET EXPENDITURE</div>
+        </div>
+        <div class="single-working-process text-center">
+
+            <div class="inner">
+                <div class="single-footer-widget">
+                    <div class="owl-carousel my-carousel">
+
+                        <div class="single-item">
+                            <div class="img-holder">
+                            <div class="my-carousel-item">
+                            <img src="https://odishaforest.in/admin/data/appimg/static_1818541446.jpg" alt="FOREST BUDGET EXPENDITURE">
+
+                             </div>
+                            </div>
+                            <div class="title-holder" style="margin-top: 22px;height: 178px;">
+                               <h3><p>Forest Budget Expenditure</p>
+</h3>
+                                <a class="btn-two" href="https://odishaforest.in/forest/fbe">Read More<span class="flaticon-next"></span></a>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <!--Start Single Working Process-->
+                <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+        <div class="sec-titleI text-center">
+            <div class="title">CAMPA</div>
+        </div>
+        <div class="single-working-process text-center">
+
+            <div class="inner">
+                <div class="single-footer-widget">
+                    <div class="brochures-carousel-box owl-carousel owl-theme">
+                        <!--Start Single Item-->
+                        <div class="single-item">
+                            <div class="img-holder">
+                                <img src="https://odishaforest.in/admin/data/appimg/static_519267494.jpg" alt="CAMPA">
+                            </div>
+                            <div class="title-holder" style="height: 176px;">
+                                <h3><p>State Compensatory Afforestation Fund Management &amp; Planning Authority</p>
+<quillbot-extension-portal></quillbot-extension-portal><quillbot-extension-portal></quillbot-extension-portal></h3>
+                                <a class="btn-two" href="https://odishaforest.in/campa">Read More<span class="flaticon-next"></span></a>
+                            </div>
+                        </div>
+                        <!--End Single Item-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Single Working Process-->
+    <!--Start Single Working Process-->
+                <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+        <div class="sec-titleI text-center">
+        <div class="title">NODAL</div>
+        </div>
+        <div class="single-working-process text-center">
+
+            <div class="inner">
+                <div class="single-footer-widget">
+                    <div class="brochures-carousel-box owl-carousel owl-theme">
+                        <!--Start Single Item-->
+                        <div class="single-item">
+                            <div class="img-holder">
+                                <img src="https://odishaforest.in/admin/data/appimg/static_973994775.jpg" alt="NODAL">
+                            </div>
+                            <div class="title-holder" style="height: 176px;">
+                                <h3><p>Forest Diversion</p>
+<quillbot-extension-portal></quillbot-extension-portal></h3>
+                                <a class="btn-two" href="https://odishaforest.in/forest-diversion">Read More<span class="flaticon-next"></span></a>
+                            </div>
+                        </div>
+                        <!--End Single Item-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Single Working Process-->
+    <!--Start Single Working Process-->
+                <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+        <div class="sec-titleI text-center">
+            <div class="title">ME & IV</div>
+        </div>
+        <div class="single-working-process text-center">
+
+            <div class="inner">
+                <div class="single-footer-widget">
+                    <div class="brochures-carousel-box owl-carousel owl-theme">
+                        <!--Start Single Item-->
+                        <div class="single-item">
+                            <div class="img-holder">
+                                <img src="https://odishaforest.in/admin/data/appimg/static_1358088706.jpg" alt="ME & IV">
+                            </div>
+                            <div class="title-holder" style="height: 176px;">
+                                <h3><h3>Monitoring Evaluation and<br />
+Internal Vigilance</h3>
+</h3>
+                                <a class="btn-two" href="https://odishaforest.in/meiv">Read More<span class="flaticon-next"></span></a>
+                            </div>
+                        </div>
+                        <!--End Single Item-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Single Working Process-->
+    <!--Start Single Working Process-->
+                <div class="col-xl-3 col-lg-3 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+        <div class="sec-titleI text-center">
+            <div class="title">FITGC</div>
+        </div>
+        <div class="single-working-process text-center">
+
+            <div class="inner">
+                <div class="single-footer-widget">
+                    <div class="brochures-carousel-box owl-carousel owl-theme">
+                        <!--Start Single Item-->
+                        <div class="single-item">
+                            <div class="img-holder">
+                                <img src="https://odishaforest.in/admin/data/appimg/static_1592914868.jpg" alt="FITGC">
+                            </div>
+                            <div class="title-holder" style="height: 176px;">
+                                <h3><h3>Forest Information Technology<br />
+and<br />
+Geomatics Centre</h3>
+</h3>
+                                <a class="btn-two" href="https://odishaforest.in/fitgc">Read More<span class="flaticon-next"></span></a>
+                            </div>
+                        </div>
+                        <!--End Single Item-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Single Working Process-->
+</div>
+</div>
+</section>
+<!--End Working Process Area-->
+
+
+<!--Start home google map area-->
+
+<section class="home-google-map-area">
+<div class="container-fluid">
+<div class="row">
+    <div class="col-xl-12">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14966.87238014824!2d85.8194098!3d20.3119325!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x875f4d1794031e42!2sOdisha%20Forest%20Head%20Quarter%20(HQ)%2C%20PCCF%20Office!5e0!3m2!1sen!2sin!4v1636185479509!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>            </div>
+</div>
+</div>
+</section>
+<!--End home google map area-->
+    <!--Start footer area Style2-->
+<footer class="footer-area">
+<div class="footer-shape-bg wow slideInRight" data-wow-delay="300ms" data-wow-duration="2500ms"></div>
+<div class="container">
+<div class="row">
+            <!--Start single footer widget-->
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="single-footer-widget marbtm50">
+            <div class="title">
+                <h3>Departments Links</h3>
+            </div>
+            <div class="services-links">
+                <ul>
+                        <li><a href="https://forest.odisha.gov.in/">FE & CC Department</a></li>
+        <li><a href="https://kenduleaves.odisha.gov.in/">Kenduleaves</a></li>
+        <li><a href="https://www.odishafdc.com/index.php">OFDC</a></li>
+        <li><a href="http://ofsds.in">OFSDP</a></li>
+        <li><a href="http://wildlife.odisha.gov.in">Wildlife</a></li>
+        <li><a href="https://www.ecotourodisha.com/">Eco-Tourism</a></li>
+        <li><a href="https://www.india.gov.in/">Government of India</a></li>
+        <li><a href="http://hrmsorissa.gov.in/">HRMS Odisha</a></li>
+        <li><a href="https://moef.gov.in/">MOEF</a></li>
+        <li><a href="https://www.fsi.nic.in/">Forest Survey of India</a></li>
+        <li><a href="https://dfokeonjhar.com/">DFO Keonjhar</a></li>
+                        </ul>
+            </div>
+        </div>
+    </div>
+    <!--End single footer widget-->
+    <!--Start single footer widget-->
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="single-footer-widget marbtm50">
+            <div class="title">
+                <h3> Important Links</h3>
+            </div>
+            <div class="services-links">
+                <ul>
+                            <li><a href="https://odishaforest.in/privacy-policy">Privacy Policy</a></li>
+        <li><a href="https://odishaforest.in/hyperlinking-policy">Hyperlinking Policy</a></li>
+        <li><a href="https://odishaforest.in/copyright-policy">Copyright Policy </a></li>
+        <li><a href="https://odishaforest.in/terms-of-use">Terms of Use</a></li>
+        <li><a href="https://odishaforest.in/disclaimer">Disclaimer</a></li>
+
+                </ul>
+            </div>
+            <div style="margin: 5px 0px 5px 0px;">
+                <h3>Links to Forestry Apps</h3>
+            </div>
+            <div class="services-links">
+                  <div class="alert alert-success" role="alert">
+                    <a href="https://odishaforestgis.in" class="alert-link" target="_blank">OFMS</a>
+                </div>
+
+      <div class="alert alert-warning" role="alert">
+                    <a href="https://ttpermitodisha.in" class="alert-link" target="_blank">Online TT Permit</a>
+                </div>
+
+      <div class="alert alert-success" role="alert">
+                    <a href="http://odishaforestlandsurvey.in" class="alert-link" target="_blank">Geo-Referencing of Forest Land in Odisha</a>
+                </div>
+
+      <div class="alert alert-primary" role="alert">
+                    <a href="https://play.google.com/store/apps/details?id=com.orsac.mojunglemyodishaforest" class="alert-link" target="_blank">Mo Jungle: My Odisha Forest</a>
+                </div>
+
+      <div class="alert alert-dark" role="alert">
+                    <a href="https://play.google.com/store/apps/details?id=web.gov.orsac.odishaknowyourlocation" class="alert-link" target="_blank">KYFL Odisha</a>
+                </div>
+
+      <div class="alert alert-danger" role="alert">
+                    <a href="https://hrd.odishaforest.in/index.php/admin/login" class="alert-link" target="_blank">Forest HRD</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!--End single footer widget-->
+    <!--Start single footer widget-->
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="single-footer-widget marbtm50">
+            <div class="title">
+                                    <h3>Quick Links</h3>
+            </div>
+            <div class="services-links">
+                <ul>
+                            <li><a href="https://odishaforest.in/campa-apo-evaluation-report">CAMPA APO Evaluation Report</a></li>
+        <li><a href="https://odishaforest.in/nurseries-seedling-stock">Nurseries Seedling Stock</a></li>
+        <li><a href="https://odishaforest.in/nurseries-species-wise-stock">Nurseries : Species-wise stock</a></li>
+        <li><a href="https://odishaforestgis.in/ofms/index.php/publicassets/assetlist">Afforestation Assets</a></li>
+        <li><a href="https://odishaforestgis.in/ofms/index.php/publicviews/assetlist">Assets @ Public Feedback</a></li>
+        <li><a href="https://odishaforestgis.in/ofms-report/schemewise_anr_report_2.php">Afforestation Reports</a></li>
+        <li><a href="https://odishaforest.in/campa">CAMPA</a></li>
+        <li><a href="https://odishaforest.in/publications">Publications</a></li>
+        <li><a href="https://odishaforest.in/rti">RTI</a></li>
+        <li><a href="https://odishaforest.in/research-training">Research & Training</a></li>
+        <li><a href="https://odishaforest.in/afforestation/seedling-distribution">Seedling Distribution-2024</a></li>
+        <li><a href="https://odishaforest.in/forest-fire">Forest Fire - 2025</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--End single footer widget-->
+    <!--Start single footer widget-->
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="single-footer-widget marbtm50">
+
+                            <div class="appointment">
+                <a class="twitter-timeline" data-height="435" data-theme="light" href="https://twitter.com/pccfodisha?ref_src=twsrc%5Etfw">Tweets by pccfodisha</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+    </div>
+    <!--End single footer widget-->
+</div>
+</div>
+</footer>
+<!--End footer area Style2-->
+
+<!--Start footer bottom area-->
+<section class="footer-bottom-area style2">
+<div class="container">
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div class="footer-bottom-content flex-box-two">
+            <div class="copyright-text">
+                <p class="count">© <span id="year"></span>, Principal Chief Conservator of Forests & HoFF, Odisha, India | All rights reserved. | <span style="float:right;"> Visitors:
+
+                <img src="https://hitwebcounter.com/counter/counter.php?page=8150388&style=0006&nbdigits=6&type=ip&initCount=0" title="Odisha Forest" Alt="Odisha Forest"   border="0" />
+                | Last update: 18-03-2025 09:07:09 AM </span></p>
+            </div>
+            <div class="footer-social-links clr-white float-right">
+                <ul class="sociallinks-style-one">
+                            <li><a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/@apccfitgis3910"><i class="fa fa-youtube"></i></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/pccfodisha/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                        <li class="wow slideInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+                    <a href="https://x.com/pccfodisha" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512"><path fill="#7c7e84" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a>
+                </li>
+                    <!-- <li class="wow slideInUp" data-wow-delay="0ms" data-wow-duration="1200ms">
+                        <a href="https://www.facebook.com/pccfodisha/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="wow slideInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+                        <a href="https://twitter.com/pccfodisha" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="wow slideInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <a href="https://www.youtube.com/channel/UC_ByHl5UbJhbcFZ6pbjLNqg/feed" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                    </li> -->
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<!--End footer bottom area-->
+
+</div>
+<div class="sticky-social">
+<ul class="social">
+            <li style="background-color: #3B5998;" ><a class="text-white"  target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+            <li style="background-color: #C22E2A;" ><a class="text-white"  target="_blank" href="https://www.youtube.com/@apccfitgis3910"><i class="fa fa-youtube"></i></a></li>
+            <li style="background-color: #E4405F;" ><a class="text-white"  target="_blank" href="https://www.instagram.com/pccfodisha/?hl=en"><i class="fa fa-instagram"></i></a></li>
+
+<li class="twitter"><a href="https://twitter.com/pccfodisha" target="_blank" class="text-white"><svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" viewBox="0 0 512 512"><path fill="#fff" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a></li>
+<!-- <li class="fb"><a href="https://www.facebook.com/pccfodisha/" class="text-white" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+<li class="twitter"><a href="https://twitter.com/pccfodisha" target="_blank" class="text-white"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+<li class="insta"><a href="https://www.youtube.com/channel/UC_ByHl5UbJhbcFZ6pbjLNqg/feed" target="_blank" class="text-white"><i class="fa fa-youtube" aria-hidden="true"></i></a></li> -->
+<!--<li class="whats"><a href="#" class="text-white"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>-->
+</ul>
+</div>
+<div class="scroll-to-top-style2 scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+<script src="https://odishaforest.in/assets/js/jquery.js"></script>
+<script src="https://odishaforest.in/assets/js/appear.js"></script>
+<script src="https://odishaforest.in/assets/js/isotope.js"></script>
+<script src="https://odishaforest.in/assets/js/jquery.bootstrap-touchspin.js"></script>
+<script src="https://odishaforest.in/assets/js/jquery.countTo.js"></script>
+<script src="https://odishaforest.in/assets/js/jquery.easing.min.js"></script>
+<script src="https://odishaforest.in/assets/js/jquery.enllax.min.js"></script>
+<script src="https://odishaforest.in/assets/js/jquery.fancybox.js"></script>
+<script src="https://odishaforest.in/assets/js/jquery.mixitup.min.js"></script>
+<script src="https://odishaforest.in/assets/js/jquery.paroller.min.js"></script>
+<!-- <script src="https://odishaforest.in/assets/js/owl.js"></script> -->
+<script src="https://odishaforest.in/assets/js/validation.js"></script>
+<script src="https://odishaforest.in/assets/js/wow.js"></script>
+<script src="https://odishaforest.in/assets/language-switcher/jquery.polyglot.language.switcher.js"></script>
+
+<!--Revolution Slider-->
+<script src="https://odishaforest.in/assets/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="https://odishaforest.in/assets/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="https://odishaforest.in/assets/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="https://odishaforest.in/assets/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="https://odishaforest.in/assets/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="https://odishaforest.in/assets/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="https://odishaforest.in/assets/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="https://odishaforest.in/assets/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="https://odishaforest.in/assets/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="https://odishaforest.in/assets/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="https://odishaforest.in/assets/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="https://odishaforest.in/assets/js/main-slider-script.js"></script>
+
+<!-- thm custom script -->
+<script src="https://odishaforest.in/assets/customs.js"></script>
+<script src="https://odishaforest.in/assets/js/custom.js"></script>
+<script src="https://odishaforest.in/assets/js/ticker.js"></script>
+<script src="https://odishaforest.in/assets/js/lightboxgallery.js"></script>
+<script src="https://odishaforest.in/assets/menu/burgermenu.js"></script>
+<script src="https://odishaforest.in/assets/js/styleswitch.js"></script>
+<script src="https://odishaforest.in/assets/js/ticker-noti.js"></script>
+<!-- <script
+src="https://code.jquery.com/jquery-3.6.2.min.js"
+integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+crossorigin="anonymous"></script>
+<script src="https://odishaforest.in/assets/js/owl.carousel.min.js"></script> -->
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js'></script>
+<script src="https://use.typekit.net/naf7ivh.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://odishaforest.in/assets/js/jquery-plugin-collection.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
+
+
+<script>
+$(document).ready(function() {
+$('.my-carousel').owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    dots: true,
+    merge: true,
+    nav: true,
+    navText: ["<span class='nav-main-slider-btn fa fa-chevron-left'></span>", "<span class='nav-main-slider-btn fa fa-chevron-right'></span>"],
+    responsive: {
+        0: {
+            items: 2
+        },
+        600: {
+            items: 1
+        }
+    }
+});
+})
+</script>
+
+
+
+<script>
+$('.tab-menu li a').on('click', function() {
+var target = $(this).attr('data-rel');
+$('.tab-menu li a').removeClass('active');
+$(this).addClass('active');
+$("#" + target).fadeIn('slow').siblings(".tab-box").hide();
+return false;
+});
+</script>
+<script type="text/javascript">
+$(function() {
+$('#menu-example').burgermenu();
+});
+document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+<script type="text/javascript">
+var btn = $('#button');
+
+$(window).scroll(function() {
+if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+} else {
+    btn.removeClass('show');
+}
+});
+
+btn.on('click', function(e) {
+e.preventDefault();
+$('html, body').animate({
+    scrollTop: 0
+}, '300');
+});
+</script>
+
+<script>
+var $affectedElements = $("p, li, div"); // Can be extended, ex. $("div, p, span.someClass")
+
+// Storing the original size in a data attribute so size can be reset
+$affectedElements.each(function() {
+var $this = $(this);
+$this.data("orig-size", $this.css("font-size"));
+});
+
+$("#btn-increase").click(function() {
+changeFontSize(1);
+})
+
+$("#btn-decrease").click(function() {
+changeFontSize(-1);
+})
+
+$("#btn-orig").click(function() {
+$affectedElements.each(function() {
+    var $this = $(this);
+    $this.css("font-size", $this.data("orig-size"));
+});
+})
+
+function changeFontSize(direction) {
+$affectedElements.each(function() {
+    var $this = $(this);
+    $this.css("font-size", parseInt($this.css("font-size")) + direction);
+});
+}
+</script>
+<script>
+// Select all links with hashes
+$('a[href*="#"]')
+// Remove links that don't actually link to anything
+.not('[href="#"]')
+.not('[href="#0"]')
+.click(function(event) {
+    // On-page links
+    if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+        location.hostname == this.hostname
+    ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 1000, function() {
+                // Callback after animation
+                // Must change focus!
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                } else {
+                    $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                };
+            });
+        }
+    }
+});
+</script>
+<script type="text/javascript">
+$(function() {
+$("#sortable-datatable").DataTable();
+
+// $( "#tablecontents" ).sortable({
+//   items: "tr",
+//   cursor: 'move',
+//   opacity: 0.6,
+//   update: function() {
+//       sendOrderToServer();
+//   }
+// });
+
+// function sendOrderToServer() {
+
+//   var order = [];
+//   $('tr.row1').each(function(index,element) {
+//     order.push({
+//       id: $(this).attr('data-id'),
+//       position: index+1
+//     });
+//   });
+
+//   $.ajax({
+//     type: "POST",
+//     dataType: "json",
+//     url: "{{ url('demos/sortabledatatable') }}",
+//     data: {
+//       order:order,
+//       _token: '{{csrf_token()}}'
+//     },
+//     success: function(response) {
+//         if (response.status == "success") {
+//           console.log(response);
+//         } else {
+//           console.log(response);
+//         }
+//     }
+//   });
+
+// }
+});
+</script>
+
+
+<script>
+$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+event.preventDefault();
+$(this).ekkoLightbox();
+});
+</script>
+
+
+
+<script>
+$(document).ready(function() {
+
+$(".sidebar-menu > li.have-children a").on("click", function(i) {
+    i.preventDefault();
+    if (!$(this).parent().hasClass("active")) {
+        $(".sidebar-menu li ul").slideUp();
+        $(this).next().slideToggle();
+        $(".sidebar-menu li").removeClass("active");
+        $(this).parent().addClass("active");
+    } else {
+        $(this).next().slideToggle();
+        $(".sidebar-menu li").removeClass("active");
+    }
+});
+});
+</script>
+<script>
+//https://pt.stackoverflow.com/questions/270800/converter-um-cod%c3%adgo-em-jquery-para-javascript-puro/270831#270831
+
+var mobileItems = document.querySelectorAll('#slide-out .nav-mobile .main-menu li.menu-item-has-children');
+[].forEach.call(mobileItems, function(el) {
+var i = document.createElement('i');
+i.setAttribute('class', 'mobile-arrows fa fa-chevron-down');
+el.appendChild(i);
+});
+
+var li_i = document.querySelectorAll('li.menu-item-has-children i.mobile-arrows');
+[].forEach.call(li_i, function(el) {
+el.addEventListener('click', function() {
+    if (this.className.indexOf('fa-chevron-down') != -1) {
+        this.classList.remove("fa-chevron-down");
+        this.classList.add("fa-chevron-up");
+    } else {
+        this.classList.remove("fa-chevron-up");
+        this.classList.add("fa-chevron-down");
+    }
+
+    var ul = this.parentNode.querySelectorAll('ul')[0];
+    ul.style.display = ul.offsetParent === null ? 'block' : 'none';
+
+});
+});
+
+var mobileItems = document.querySelectorAll('#slide-out .st-nav-mobile .main-menu *');
+var elpai = mobileItems[0].parentNode;
+[].forEach.call(mobileItems, function(el) {
+elpai.parentNode.appendChild(el);
+
+var tn = el.nodeName.toLowerCase();
+if (tn == "div" && el.className.indexOf('menu-mega-latest-posts') != -1) el.outerHTML = '';
+if (tn == "div" && el.className.indexOf('mega-cat-content-tab') != -1) el.outerHTML = '';
+if (tn == "div" && el.className.indexOf('mega-recent-post') != -1) el.outerHTML = '';
+});
+
+elpai.outerHTML = '';
+</script>
+
+<script>
+// Select all links with hashes
+$('a[href*="#"]')
+// Remove links that don't actually link to anything
+.not('[href="#"]')
+.not('[href="#0"]')
+.click(function(event) {
+    // On-page links
+    if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+        location.hostname == this.hostname
+    ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 1000, function() {
+                // Callback after animation
+                // Must change focus!
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                } else {
+                    $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                };
+            });
+        }
+    }
+});
+</script>
+
+<script>
+$(document).ready(() => {
+$('#myModal').modal('show');
+// setTimeout(() => $('#myModal').modal('show'), 1000);
+// setTimeout(() => $('#myModal').modal('hide'), 4000);
+})
+const show = () => {
+$('#myModal').modal('show');
+}
+</script>
+<!-- <script>
+
+$(document).ready(function(){
+$(".owl-carousel").owlCarousel();
+});
+</script> -->
+
+
+
+
+<script>
+const urlfireofms = "https://mapserver.odishaforestgis.in/geoserver/fire_points_analysis/wms";
+
+var iconStyles = {
+"Not Responded": new ol.style.Style({
+        image: new ol.style.Icon({
+            anchor: [0.5, 0.1], // Anchor the icon at the bottom center
+            anchorXUnits: 'fraction',
+            anchorYUnits: 'fraction',
+            src: 'https://odishaforest.in/assets/images/fire.png', // Replace with the URL of your icon image
+            scale: 0.15 // Scale the icon if needed
+        })
+    }),
+"Responded":new ol.style.Style({
+        image: new ol.style.Icon({
+            anchor: [0.5, 0.1], // Anchor the icon at the bottom center
+            anchorXUnits: 'fraction',
+            anchorYUnits: 'fraction',
+            src: 'https://odishaforest.in/assets/images/fire_responded.png', // Replace with the URL of your icon image
+            scale: 0.15 // Scale the icon if needed
+        })
+    })
+};
+var divison = new ol.layer.Image({
+    name: 'divison',
+    description: 'divison',
+    source: new ol.source.ImageWMS({
+        url: urlfireofms,
+        params: {
+            'LAYERS': 'fire_points_analysis:master_area_division',
+            'FORMAT': 'image/png',
+            'TILED': false,
+            'VERSION': '1.3.0',
+            'STYLES':'master_area_division_for_website',
+            "CQL_FILTER": "name_e <> 'EVD' and active=1"
+        },
+    }),
+    visible: true
+});
+var divison2 = new ol.layer.Image({
+    name: 'divison',
+    description: 'divison',
+    source: new ol.source.ImageWMS({
+        url: urlfireofms,
+        params: {
+            'LAYERS': 'fire_points_analysis:master_area_division',
+            'FORMAT': 'image/png',
+            'TILED': false,
+            'VERSION': '1.3.0',
+            'STYLES':'master_area_division_for_website',
+            "CQL_FILTER": "name_e <> 'EVD' and active=1"
+        },
+    }),
+    visible: true
+});
+var  fireSource = new ol.source.Vector();
+var respondedSource = new ol.source.Vector();
+
+var fireLayer = new ol.layer.Vector({
+    source: fireSource,
+    style: new ol.style.Style({
+        image: new ol.style.Icon({
+            anchor: [0.5, 1],
+            src: 'fire.png', // Replace with your fire icon
+            scale: 0.5
+        })
+    })
+});
+
+var respondedLayer = new ol.layer.Vector({
+    source: respondedSource,
+    style: new ol.style.Style({
+        image: new ol.style.Icon({
+            anchor: [0.5, 1],
+            src: 'fire_responded.png', // Replace with your responded icon
+            scale: 0.5
+        })
+    })
+});
+
+// Create a common view for both maps
+const transformCoords = (lon, lat) => ol.proj.fromLonLat([lon, lat]);
+
+// Create a common view for both maps
+const view1 = new ol.View({
+center: transformCoords(85.28, 20.25),
+zoom: 6.5
+});
+
+const view2 = new ol.View({
+center: transformCoords(85.28, 20.25),
+zoom: 6.5
+});
+
+// Create two maps
+const map1 = new ol.Map({
+target: 'map1',
+layers: [
+new ol.layer.Tile({
+  source: new ol.source.OSM()
+}),
+divison
+],
+
+view: view1
+});
+
+const map2 = new ol.Map({
+target: 'map2',
+layers: [
+new ol.layer.Tile({
+  source: new ol.source.OSM()
+}),
+divison2
+],
+view: view2
+});
+
+// Sync the views
+const syncViews = () => {
+const center1 = view1.getCenter();
+const resolution1 = view1.getResolution();
+
+view2.setCenter(center1);
+view2.setResolution(resolution1);
+
+};
+const syncViews1 = () => {
+const center2 = view2.getCenter();
+const resolution2 = view2.getResolution();
+
+view1.setCenter(center2);
+view1.setResolution(resolution2);
+
+};
+// Event listener to sync both maps when the user interacts with either of the maps
+view1.on('change:center', syncViews);
+view1.on('change:resolution', syncViews);
+view2.on('change:center', syncViews1);
+view2.on('change:resolution', syncViews1);
+
+const   addFirePointsToMap = (map, fireData) => {
+    const features = fireData.map(item => {
+        return new ol.Feature({
+            geometry: new ol.geom.Point(transformCoords(item.lng, item.lat)),
+            id: item.id
+        });
+    });
+
+   fireSource = new ol.source.Vector({
+        features: features
+    });
+
+    fireLayer  = new ol.layer.Vector({
+    source: fireSource,
+    style: new ol.style.Style({
+        image: new ol.style.Icon({
+            anchor: [0.5, 0.1], // Anchor the icon at the bottom center
+            anchorXUnits: 'fraction',
+            anchorYUnits: 'fraction',
+            src: 'https://odishaforest.in/assets/images/fire.png', // Replace with the URL of your icon image
+            scale: 0.15 // Scale the icon if needed
+        })
+    })
+});
+
+    map.addLayer(fireLayer);
+};
+const addFirePointsToMap2 = (map, fireData) => {
+    const features = fireData.map(item => {
+        return new ol.Feature({
+            geometry: new ol.geom.Point(transformCoords(item.lng, item.lat)),
+            id: item.id,
+            response_status: item.response_status
+        });
+    });
+
+   respondedSource = new ol.source.Vector({
+        features: features
+    });
+
+    var styleFunction = function (feature) {
+const status = feature.get("response_status");
+return iconStyles[status] || new ol.style.Style(); // Default empty style if status not found
+};
+    respondedLayer  = new ol.layer.Vector({
+    source: respondedSource,
+    style:styleFunction
+  });
+
+    map.addLayer(respondedLayer);
+};
+var northArrow = document.createElement('div');
+northArrow.className = 'north-arrow';
+var northArrow2 = document.createElement('div');
+northArrow2.className = 'north-arrow';
+// Add the control to the map
+map1.getViewport().appendChild(northArrow);
+map2.getViewport().appendChild(northArrow2);
+// Add fire points to both maps
+const fetchFireData = (selectedDate) => {
+    const form = new FormData();
+    form.append("data", JSON.stringify({ "fire_date": selectedDate }));
+
+    const settings = {
+        url: "https://odishaforestgis.in/ofms/index.php/webservice_api/fsiFireMapData",
+        method: "POST",
+        timeout: 0,
+
+        processData: false,
+        mimeType: "multipart/form-data",
+        contentType: false,
+        data: form
+    };
+    // const settings2 = {
+    //     url: "https://odishaforestgis.in/ofms/index.php/webservice_api/fsiFireResponseData",
+    //     method: "POST",
+    //     timeout: 0,
+
+    //     processData: false,
+    //     mimeType: "multipart/form-data",
+    //     contentType: false,
+    //     data: form
+    // };
+
+
+    $.ajax(settings).done(function (response) {
+        try {
+            fireSource.clear();
+            respondedSource.clear();
+            const data = JSON.parse(response).post;
+            if (data && JSON.parse(response).post) {
+                $("#fireCount").html("");
+                $("#respondedCount").html("");
+                $("#notrespondedCount").html("");
+                //$("#respondedCount").html(JSON.parse(response1).post.fire_count);
+                const statusCounts = {
+"Not Responded": 0,
+"Responded": 0
+};
+data.list.forEach(fire => {
+if (statusCounts.hasOwnProperty(fire.response_status)) {
+statusCounts[fire.response_status]++;
+}
+});
+
+console.log("Status Counts:", statusCounts);
+
+
+
+                //document.getElementById('fireCount').html("");
+                addFirePointsToMap(map1, JSON.parse(response).post.list);
+                addFirePointsToMap2(map2, JSON.parse(response).post.list);
+                $("#fireCount").html(JSON.parse(response).post.fire_count);
+                $("#respondedCount").html("&nbsp&nbsp" + statusCounts['Responded']);
+                $("#notrespondedCount").html("&nbsp&nbsp" + statusCounts['Not Responded']);
+
+
+
+                //addFirePointsToMap(map2, JSON.parse(response).post.list);
+                //updateCounts(JSON.parse(response).post.fire_count, document.getElementById('respondedCount').textContent);
+               // document.getElementById('fireCount').html(JSON.parse(response).post.fire_count);
+                //addFirePointsToMap(map2, JSON.parse(response).post.list);
+                //updateCounts(JSON.parse(response).post.fire_count, document.getElementById('respondedCount').textContent);
+                //updateCounts(JSON.parse(response).post.fire_count,document.getElementById('fireCount').textContent);
+
+            }
+        } catch (error) {
+            console.error("Error parsing response:", error);
+            alert("Failed to parse fire data.");
+        }
+    }).fail(function (xhr, status, error) {
+        console.error('Error fetching fire data:', error);
+        alert('Failed to fetch fire data.');
+    });
+
+    // $.ajax(settings2).done(function (response1) {
+    //     try {
+    //         respondedSource.clear();
+    //         const data = JSON.parse(response1).post;
+    //         if (data && JSON.parse(response1).post) {
+    //             $("#respondedCount").html("");
+    //             addFirePointsToMap2(map2, JSON.parse(response1).post.list);
+    //             $("#respondedCount").html(JSON.parse(response1).post.fire_count);
+    //             // document.getElementById('respondedCount').html("");
+    //             // //addFirePointsToMap(map2, JSON.parse(response).post.list);
+    //             // //updateCounts(JSON.parse(response).post.fire_count, document.getElementById('respondedCount').textContent);
+    //             // document.getElementById('respondedCount').html(JSON.parse(response1).post.fire_count);
+    //             //addFirePointsToMap(map2, JSON.parse(response).post.list);
+
+    //         }
+    //     } catch (error) {
+    //         console.error("Error parsing response:", error);
+    //         alert("Failed to parse fire data.");
+    //     }
+    // }).fail(function (xhr, status, error) {
+    //     console.error('Error fetching fire data:', error);
+    //     alert('Failed to fetch fire data.');
+    // });
+};
+function updateCounts(fireCount, respondedCount) {
+    document.getElementById('fireCount').textContent = fireCount;
+    document.getElementById('respondedCount').textContent = respondedCount;
+}
+// Apply Date Button Click Event
+document.getElementById('applyDate').addEventListener('click', () => {
+    const selectedDate = document.getElementById('datePicker').value;
+    if (selectedDate) {
+        const formattedDate = new Date(selectedDate).toLocaleDateString('en-GB');
+        document.getElementById('map1Header').textContent = `FSI TOTAL FIRE POINTS ON ${formattedDate}`;
+        document.getElementById('map2Header').textContent = `FSI RESPONDED/NOT RESPONDED FIRE POINTS ON ${formattedDate}`;
+
+        // Fetch and display fire data
+        fetchFireData(selectedDate);
+    } else {
+        alert('Please select a date.');
+    }
+});
+
+// Set current date in the date picker and update headers
+const today = new Date().toISOString().split('T')[0];
+document.getElementById('datePicker').value = today;
+
+const initialDate = new Date(today).toLocaleDateString('en-GB');
+document.getElementById('map1Header').textContent = `FSI TOTAL FIRE POINTS ON ${initialDate}`;
+document.getElementById('map2Header').textContent = `FSI RESPONDED/NOT RESPONDED FIRE POINTS ON ${initialDate}`;
+
+// Initial fetch of fire data
+fetchFireData(today);
+</script>			</body>
+      </html>
