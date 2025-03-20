@@ -131,7 +131,7 @@
                     <tr>
                         <th>Name</th>
                         
-                        <th>Email</th>
+                       
                         
                         
                         <th>Roll Number</th>
@@ -149,12 +149,12 @@
             var roll = document.getElementById("rollNumber").value.trim();
             var dob = document.getElementById("dob").value.trim();
             var results = {
-                "2504765234": { name: "JYOTI RANJAN SAHOO", dob: "1981-06-19", email: "jyoti_4sahoo@yahoo.com", stage1: 78, stage2: 82 },
-                "2504775456": { name: "DEBASHIS JENA", dob: "1997-05-20", email: "debashisjena248@gmail.com",  stage1: 88, stage2: 72 },
-                "2504785834": { name: "SUKANTA KUMAR MAHAPATRA", dob: "1987-04-06", email: "skmahapatra1987@gmail.com",  stage1: 76, stage2: 73 },
-                "2505645178": { name: "RAJANIKANTA SAHANI", dob: "1997-06-02", email: "rksahani1319@gmail.com",  stage1: 80, stage2: 78 },
-                "2505665178": { name: "SATYAPRANGYA PRUSTY", dob: "1991-06-24", email: "satyaprangyaprusty@gmail.com", stage1: 90, stage2: 75 },
-                "2507655278": { name: "OM PRAKASH BEHERA", dob: "2000-01-29", email: "omprakashbehera1413@gmail.com", stage1: 80, stage2: 71 }
+                "2504765234": { name: "JYOTI RANJAN SAHOO", dob: "1981-06-19", stage1: 78, stage2: 82 },
+                "2504775456": { name: "DEBASHIS JENA", dob: "1997-05-20",  stage1: 88, stage2: 72 },
+                "2504785834": { name: "SUKANTA KUMAR MAHAPATRA", dob: "1987-04-06",  stage1: 76, stage2: 73 },
+                "2505645178": { name: "RAJANIKANTA SAHANI", dob: "1997-06-02",  stage1: 80, stage2: 78 },
+                "2505665178": { name: "SATYAPRANGYA PRUSTY", dob: "1991-06-24",  stage1: 90, stage2: 75 },
+                "2507655278": { name: "OM PRAKASH BEHERA", dob: "2000-01-29",  stage1: 80, stage2: 71 }
             };
             var resultBox = document.getElementById("resultBox");
             var resultTableBody = document.getElementById("resultTableBody");
@@ -163,8 +163,8 @@
                 resultTableBody.innerHTML = `
                     <tr>
                         <td>${student.name}</td>
+                        
                        
-                        <td>${student.email}</td>
                         
                         <td>${roll}</td>
                         <td>${student.stage1}</td>
