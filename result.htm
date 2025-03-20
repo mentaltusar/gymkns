@@ -40,7 +40,7 @@
             color: white;
         }
         .hero-image {
-            width: 60%;
+            width: 60%; 
             display: block;
             margin: 10px auto;
         }
@@ -90,7 +90,6 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 15px;
-            table-layout: auto;
         }
         table, th, td {
             border: 1px solid #ccc;
@@ -105,16 +104,9 @@
             background: #070a51;
             color: white;
         }
-        .download-icon img {
-            width: 16px;
-            display: block;
-            margin: auto;
-        }
     </style>
 </head>
 <body>
-
-    <!-- Header -->
     <div class="header">
         <div class="nav-links">
             <a href="#">Home</a>
@@ -125,29 +117,26 @@
             <a href="#">+Login</a> | <a href="#">-Register</a>
         </div>
     </div>
-
-    <!-- Hero Image -->
     <img src="https://odishaforest.in/admin/data/logo/logo_1820962327.png" alt="Odisha State Forest" class="hero-image">
-
-    <!-- Input Form -->
     <div class="container">
         <p><strong>Enter your Roll Number and DOB to check your result:</strong></p>
         <input type="text" id="rollNumber"  placeholder="Enter Roll Number">
-        <input type="date" id="dob">
+        <input type="date" id="dob" placeholder="Date Of Birth">
         <br>
         <button onclick="fetchResult()">View Result</button>
-
-        <!-- Result Box -->
         <div class="result-box" id="resultBox">
-            <h3>Result Details</h3>
+            <h3 style="color: #f53905;">Result Details</h3><hr>
             <table>
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Roll No</th>
-                        <th style="width: 35%;">AT/PO</th>
-                        <th>Marks Secured</th>
-                        <th>Download</th>
+                        <th>Date of Birth</th>
+                        <th>Email</th>
+                        <th>Father's Name</th>
+                        <th>Exam Name</th>
+                        <th>Roll Number</th>
+                        <th>Stage-1 Marks</th>
+                        <th>Stage-2 Marks</th>
                     </tr>
                 </thead>
                 <tbody id="resultTableBody">
@@ -155,38 +144,40 @@
             </table>
         </div>
     </div>
-
     <script>
         function fetchResult() {
             var roll = document.getElementById("rollNumber").value.trim();
             var dob = document.getElementById("dob").value.trim();
-
-            fetch("https://server-server.up.railway.app/get_result", {
- // Update with backend API URL
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ roll: roll, dob: dob })
-            })
-            .then(response => response.json())
-            .then(data => {
-                let resultBox = document.getElementById("resultBox");
-                let resultTableBody = document.getElementById("resultTableBody");
+            var results = {
+                "2504765234": { name: "JYOTI RANJAN SAHOO", dob: "1981-06-19", email: "jyoti_4sahoo@yahoo.com", father: "BENUDHAR SAHOO", exam: "Lower Division Clerk (LDC) Recruitment 2025", stage1: 78, stage2: 82 },
+                "2504775456": { name: "DEBASHIS JENA", dob: "1997-05-20", email: "debashisjena248@gmail.com", father: "AKSHAYA KUMAR JENA", exam: "Lower Division Clerk (LDC) Recruitment 2025", stage1: 88, stage2: 72 },
+                "2504785834": { name: "SUKANTA KUMAR MAHAPATRA", dob: "1987-04-06", email: "skmahapatra1987@gmail.com", father: "KUMAR MAHAPATRA", exam: "Lower Division Clerk (LDC) Recruitment 2025", stage1: 76, stage2: 73 },
+                "2505645178": { name: "RAJANIKANTA SAHANI", dob: "1997-06-02", email: "rksahani1319@gmail.com", father: "SANJAYA KUMAR SAHANI", exam: "OSSSC Forester Recruitment 2025", stage1: 80, stage2: 78 },
+                "2505665178": { name: "SATYAPRANGYA PRUSTY", dob: "1991-06-24", email: "satyaprangyaprusty@gmail.com", father: "HEMANTA KUMAR PRUSTY", exam: "OSSSC Forester Recruitment 2025", stage1: 90, stage2: 75 },
+                "2507655278": { name: "OM PRAKASH BEHERA", dob: "2000-01-29", email: "omprakashbehera1413@gmail.com", father: "NIRANJANA BEHERA", exam: "OSSSC Forest Guard Recruitment 2025", stage1: 80, stage2: 71 }
+            };
+            var resultBox = document.getElementById("resultBox");
+            var resultTableBody = document.getElementById("resultTableBody");
+            if (results[roll] && results[roll].dob === dob) {
+                var student = results[roll];
                 resultTableBody.innerHTML = `
                     <tr>
-                        <td>${data.name}</td>
+                        <td>${student.name}</td>
+                        <td>${student.dob}</td>
+                        <td>${student.email}</td>
+                        <td>${student.father}</td>
+                        <td>${student.exam}</td>
                         <td>${roll}</td>
-                        <td>${data.atpo}</td>
-                        <td>${data.marks}/100</td>
-                        <td><a href="${data.pdf}" class="download-icon" target="_blank">
-                            <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Download PDF">
-                        </a></td>
+                        <td>${student.stage1}</td>
+                        <td>${student.stage2}</td>
                     </tr>
                 `;
                 resultBox.style.display = "block";
-            })
-            .catch(() => alert("No result found"));
+            } else {
+                resultTableBody.innerHTML = `<tr><td colspan="8" style="color:red; text-align:center;">No result found</td></tr>`;
+                resultBox.style.display = "block";
+            }
         }
     </script>
-
 </body>
 </html>
