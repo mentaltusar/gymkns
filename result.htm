@@ -53,6 +53,7 @@
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
             text-align: center;
+            overflow-x: auto;
         }
         input {
             width: 100%;
@@ -88,14 +89,12 @@
             border: 2px solid rgb(159, 163, 159);
             font-size: 14px;
             overflow-x: auto;
+            width: 100%;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 15px;
-            display: block;
-            overflow-x: auto;
-            white-space: nowrap;
         }
         table, th, td {
             border: 1px solid #ccc;
@@ -125,6 +124,9 @@
             .hero-image {
                 width: 80%;
             }
+            .container, .result-box {
+                width: 100%;
+            }
             table, th, td {
                 font-size: 12px;
                 padding: 6px;
@@ -152,7 +154,7 @@
         <button onclick="fetchResult()">View Result</button>
         <div class="result-box" id="resultBox">
             <h3 style="color: #f53905;">Result Details</h3><hr>
-            <div style="overflow-x: auto;">
+            <div style="overflow-x: auto; width: 100%;">
                 <table>
                     <thead>
                         <tr>
