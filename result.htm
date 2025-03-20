@@ -40,12 +40,13 @@
             color: white;
         }
         .hero-image {
-            width: 60%; 
+            width: 60%;
             display: block;
             margin: 10px auto;
         }
         .container {
-            width: 50%;
+            width: 90%;
+            max-width: 600px;
             background: white;
             padding: 20px;
             margin: 20px auto;
@@ -54,16 +55,17 @@
             text-align: center;
         }
         input {
-            width: 70%;
+            width: 100%;
             padding: 8px;
             margin: 8px 0;
             font-size: 15px;
             border-radius: 5px;
             border: 1px solid #ccc;
+            box-sizing: border-box;
         }
         button {
-            width: 25%;
-            padding: 7px;
+            width: 100%;
+            padding: 10px;
             background: #0a056b;
             color: white;
             font-size: 14px;
@@ -85,11 +87,15 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border: 2px solid rgb(159, 163, 159);
             font-size: 14px;
+            overflow-x: auto;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 15px;
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
         }
         table, th, td {
             border: 1px solid #ccc;
@@ -103,6 +109,26 @@
         th {
             background: #070a51;
             color: white;
+        }
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+                text-align: center;
+            }
+            .nav-links, .auth-links {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .hero-image {
+                width: 80%;
+            }
+            table, th, td {
+                font-size: 12px;
+                padding: 6px;
+            }
         }
     </style>
 </head>
@@ -126,58 +152,25 @@
         <button onclick="fetchResult()">View Result</button>
         <div class="result-box" id="resultBox">
             <h3 style="color: #f53905;">Result Details</h3><hr>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Date of Birth</th>
-                        <th>Email</th>
-                        <th>Father's Name</th>
-                        <th>Exam Name</th>
-                        <th>Roll Number</th>
-                        <th>Stage-1 Marks</th>
-                        <th>Stage-2 Marks</th>
-                    </tr>
-                </thead>
-                <tbody id="resultTableBody">
-                </tbody>
-            </table>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Date of Birth</th>
+                            <th>Email</th>
+                            <th>Father's Name</th>
+                            <th>Exam Name</th>
+                            <th>Roll Number</th>
+                            <th>Stage-1 Marks</th>
+                            <th>Stage-2 Marks</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultTableBody">
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-    <script>
-        function fetchResult() {
-            var roll = document.getElementById("rollNumber").value.trim();
-            var dob = document.getElementById("dob").value.trim();
-            var results = {
-                "2504765234": { name: "JYOTI RANJAN SAHOO", dob: "1981-06-19", email: "jyoti_4sahoo@yahoo.com", father: "BENUDHAR SAHOO", exam: "Lower Division Clerk (LDC) Recruitment 2025", stage1: 78, stage2: 82 },
-                "2504775456": { name: "DEBASHIS JENA", dob: "1997-05-20", email: "debashisjena248@gmail.com", father: "AKSHAYA KUMAR JENA", exam: "Lower Division Clerk (LDC) Recruitment 2025", stage1: 88, stage2: 72 },
-                "2504785834": { name: "SUKANTA KUMAR MAHAPATRA", dob: "1987-04-06", email: "skmahapatra1987@gmail.com", father: "KUMAR MAHAPATRA", exam: "Lower Division Clerk (LDC) Recruitment 2025", stage1: 76, stage2: 73 },
-                "2505645178": { name: "RAJANIKANTA SAHANI", dob: "1997-06-02", email: "rksahani1319@gmail.com", father: "SANJAYA KUMAR SAHANI", exam: "OSSSC Forester Recruitment 2025", stage1: 80, stage2: 78 },
-                "2505665178": { name: "SATYAPRANGYA PRUSTY", dob: "1991-06-24", email: "satyaprangyaprusty@gmail.com", father: "HEMANTA KUMAR PRUSTY", exam: "OSSSC Forester Recruitment 2025", stage1: 90, stage2: 75 },
-                "2507655278": { name: "OM PRAKASH BEHERA", dob: "2000-01-29", email: "omprakashbehera1413@gmail.com", father: "NIRANJANA BEHERA", exam: "OSSSC Forest Guard Recruitment 2025", stage1: 80, stage2: 71 }
-            };
-            var resultBox = document.getElementById("resultBox");
-            var resultTableBody = document.getElementById("resultTableBody");
-            if (results[roll] && results[roll].dob === dob) {
-                var student = results[roll];
-                resultTableBody.innerHTML = `
-                    <tr>
-                        <td>${student.name}</td>
-                        <td>${student.dob}</td>
-                        <td>${student.email}</td>
-                        <td>${student.father}</td>
-                        <td>${student.exam}</td>
-                        <td>${roll}</td>
-                        <td>${student.stage1}</td>
-                        <td>${student.stage2}</td>
-                    </tr>
-                `;
-                resultBox.style.display = "block";
-            } else {
-                resultTableBody.innerHTML = `<tr><td colspan="8" style="color:red; text-align:center;">No result found</td></tr>`;
-                resultBox.style.display = "block";
-            }
-        }
-    </script>
 </body>
 </html>
