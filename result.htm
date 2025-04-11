@@ -135,8 +135,8 @@
                         
                         
                         <th>Roll Number</th>
-                        <th>Stage-1 Marks</th>
-                        <th>Stage-2 Marks</th>
+                        <th>Post</th>
+                        <th>Remark</th>
                     </tr>
                 </thead>
                 <tbody id="resultTableBody">
@@ -149,16 +149,21 @@
             var roll = document.getElementById("rollNumber").value.trim();
             var dob = document.getElementById("dob").value.trim();
             var results = {
-                "2504765234": { name: "JYOTI RANJAN SAHOO", dob: "1981-06-19", stage1: 78, stage2: 82 },
-                "2504775456": { name: "DEBASHIS JENA", dob: "1997-05-20",  stage1: 88, stage2: 72 },
-                "2504785834": { name: "SUKANTA KUMAR MAHAPATRA", dob: "1987-04-06",  stage1: 76, stage2: 73 },
-                "2505645178": { name: "RAJANIKANTA SAHANI", dob: "1997-06-02",  stage1: 80, stage2: 78 },
-                "2505665178": { name: "SATYAPRANGYA PRUSTY", dob: "1991-06-24",  stage1: 90, stage2: 75 },
-                "2507655278": { name: "OM PRAKASH BEHERA", dob: "2000-01-29",  stage1: 80, stage2: 71 }
+                "2504765234": { name: "JYOTI RANJAN SAHOO", dob: "1981-06-19", post: 78, remark: "Pass" },
+                "2504775456": { name: "DEBASHIS JENA", dob: "1997-05-20",  post: 88, remark: "Pass },
+                "2504785834": { name: "SUKANTA KUMAR MAHAPATRA", dob: "1987-04-06",  post: 76, remark: "Pass },
+                "2505645178": { name: "RAJANIKANTA SAHANI", dob: "1997-06-02",  post: 80, remark: "Pass" },
+                "2505665178": { name: "SATYAPRANGYA PRUSTY", dob: "1991-06-24",  post: 90, remark: "Pass" },
+                "2507655278": { name: "OM PRAKASH BEHERA", dob: "2000-01-29",  post: 80, remark: "Pass" },
+                "0166001898": { name: "Hemanta Kumar Dakua", dob: "2000-01-29",  post: "Forest Guard", remark: "Pass" },
+                "0166002701": { name: "Jagannath Putel", dob: "2000-01-12",  post: "Forest Guard", remark: "Pass" },
+                "0166003808": { name: "Santosh Kumar Dakua", dob: "2000-09-29",  post: "Forest Guard", remark: "Pass" },
+                "0166003795": { name: "Koshal Kumar Hans", dob: "1990-01-29",  post: "Forest Guard", remark: "Pass" },
+                "0125001761": { name: "Amerandra Kumar Dash", dob: "1998-01-29",  post: "Forester", remark: "Pass" },
             };
             var resultBox = document.getElementById("resultBox");
             var resultTableBody = document.getElementById("resultTableBody");
-            if (results[roll] && results[roll].dob === dob) {
+            if (results[roll] === roll) {
                 var student = results[roll];
                 resultTableBody.innerHTML = `
                     <tr>
@@ -167,8 +172,8 @@
                        
                         
                         <td>${roll}</td>
-                        <td>${student.stage1}</td>
-                        <td>${student.stage2}</td>
+                        <td>${student.post}</td>
+                        <td>${student.remark}</td>
                     </tr>
                 `;
                 resultBox.style.display = "block";
