@@ -144,44 +144,43 @@
             </table>
         </div>
     </div>
-    <script>
-        function fetchResult() {
-            var roll = document.getElementById("rollNumber").value.trim();
-            var dob = document.getElementById("dob").value.trim();
-            var results = {
-                "2504765234": { name: "JYOTI RANJAN SAHOO", dob: "1981-06-19", post: 78, remark: "Pass" },
-                "2504775456": { name: "DEBASHIS JENA", dob: "1997-05-20",  post: 88, remark: "Pass },
-                "2504785834": { name: "SUKANTA KUMAR MAHAPATRA", dob: "1987-04-06",  post: 76, remark: "Pass },
-                "2505645178": { name: "RAJANIKANTA SAHANI", dob: "1997-06-02",  post: 80, remark: "Pass" },
-                "2505665178": { name: "SATYAPRANGYA PRUSTY", dob: "1991-06-24",  post: 90, remark: "Pass" },
-                "2507655278": { name: "OM PRAKASH BEHERA", dob: "2000-01-29",  post: 80, remark: "Pass" },
-                "0166001898": { name: "Hemanta Kumar Dakua", dob: "2000-01-29",  post: "Forest Guard", remark: "Pass" },
-                "0166002701": { name: "Jagannath Putel", dob: "2000-01-12",  post: "Forest Guard", remark: "Pass" },
-                "0166003808": { name: "Santosh Kumar Dakua", dob: "2000-09-29",  post: "Forest Guard", remark: "Pass" },
-                "0166003795": { name: "Koshal Kumar Hans", dob: "1990-01-29",  post: "Forest Guard", remark: "Pass" },
-                "0125001761": { name: "Amerandra Kumar Dash", dob: "1998-01-29",  post: "Forester", remark: "Pass" },
-            };
-            var resultBox = document.getElementById("resultBox");
-            var resultTableBody = document.getElementById("resultTableBody");
-            if (results[roll] === roll) {
-                var student = results[roll];
-                resultTableBody.innerHTML = `
-                    <tr>
-                        <td>${student.name}</td>
-                        
-                       
-                        
-                        <td>${roll}</td>
-                        <td>${student.post}</td>
-                        <td>${student.remark}</td>
-                    </tr>
-                `;
-                resultBox.style.display = "block";
-            } else {
-                resultTableBody.innerHTML = `<tr><td colspan="8" style="color:red; text-align:center;">No result found</td></tr>`;
-                resultBox.style.display = "block";
-            }
+   <script>
+    function fetchResult() {
+        var roll = document.getElementById("rollNumber").value.trim();
+        var results = {
+            "2504765234": { name: "JYOTI RANJAN SAHOO", dob: "1981-06-19", post: 78, remark: "Pass" },
+            "2504775456": { name: "DEBASHIS JENA", dob: "1997-05-20", post: 88, remark: "Pass" },
+            "2504785834": { name: "SUKANTA KUMAR MAHAPATRA", dob: "1987-04-06", post: 76, remark: "Pass" },
+            "2505645178": { name: "RAJANIKANTA SAHANI", dob: "1997-06-02", post: 80, remark: "Pass" },
+            "2505665178": { name: "SATYAPRANGYA PRUSTY", dob: "1991-06-24", post: 90, remark: "Pass" },
+            "2507655278": { name: "OM PRAKASH BEHERA", dob: "2000-01-29", post: 80, remark: "Pass" },
+            "0166001898": { name: "Hemanta Kumar Dakua", dob: "2000-01-29", post: "Forest Guard", remark: "Pass" },
+            "0166002701": { name: "Jagannath Putel", dob: "2000-01-12", post: "Forest Guard", remark: "Pass" },
+            "0166003808": { name: "Santosh Kumar Dakua", dob: "2000-09-29", post: "Forest Guard", remark: "Pass" },
+            "0166003795": { name: "Koshal Kumar Hans", dob: "1990-01-29", post: "Forest Guard", remark: "Pass" },
+            "0125001761": { name: "Amerandra Kumar Dash", dob: "1998-01-29", post: "Forester", remark: "Pass" },
+        };
+
+        var resultBox = document.getElementById("resultBox");
+        var resultTableBody = document.getElementById("resultTableBody");
+
+        if (results[roll]) {
+            var student = results[roll];
+            resultTableBody.innerHTML = `
+                <tr>
+                    <td>${student.name}</td>
+                    <td>${roll}</td>
+                    <td>${student.post}</td>
+                    <td>${student.remark}</td>
+                </tr>
+            `;
+        } else {
+            resultTableBody.innerHTML = `<tr><td colspan="4" style="color:red; text-align:center;">No result found</td></tr>`;
         }
-    </script>
+
+        resultBox.style.display = "block";
+    }
+</script>
+
 </body>
 </html>
